@@ -18,6 +18,7 @@ else:
 
 KINECT_MAX_BODY_COUNT = 6
 
+# TEST COMMIT
 
 class PyKinectRuntime(object):
     """manages Kinect objects and simplifying access to them"""
