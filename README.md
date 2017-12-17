@@ -27,4 +27,6 @@
         - Verified that the pykinect2 library was an outdated version
     
     2. Eye Clinic HH.py successfully executed 
+    
+    3. GitHub error, cant push/commit from Pycharm, have to be done in GitHub Desktop
         
