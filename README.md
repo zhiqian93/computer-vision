@@ -11,3 +11,20 @@
         - Record data
         - Purchase/Research Potential Dev Boards
         - Or perhaps buy an Intel Real Sense Kit
+        
+16 Dec: Debug and Installing Library
+    
+    1. Fix issues of using Python 3.7 instead of Python 3.6
+        - pygame is only available in 3.6
+        - reset pip if have duplicated copies (verified later that pip is not the issue)
+        - pip is disabled to install wheel files
+        
+    2. Github files are located in D;\GitHub\
+    
+17 Dec:
+    
+    1. Files failing to compile due to attributes not found in pykinect2 library
+        - Verified that the pykinect2 library was an outdated version
+    
+    2. Eye Clinic HH.py successfully executed 
+        
