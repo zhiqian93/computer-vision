@@ -29,4 +29,16 @@
     2. Eye Clinic HH.py successfully executed 
     
     3. GitHub error, cant push/commit from Pycharm, have to be done in GitHub Desktop
-        
+    
+26 Dec:
+    
+    Base python files:
+        - Depth Skeleton [DONE]
+        - Tracking Patient
+            a. Track Chair and People in the chair
+            b. Once detected Initiate "wait for HH"
+        - Tracking HH
+            a. use ESP8266 for handrub dispenser
+            b. disp plates ready
+            c. ESP8266 [haven't buy]
+            d. Disp Box [haven't collect/print]
