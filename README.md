@@ -17,7 +17,7 @@
     1. Fix issues of using Python 3.7 instead of Python 3.6
         - pygame is only available in 3.6
         - reset pip if have duplicated copies (verified later that pip is not the issue)
-        - pip is disabled to install wheel files
+        - pip is disabled to install wheel files [Unresolved]
         
     2. Github files are located in D;\GitHub\
     
