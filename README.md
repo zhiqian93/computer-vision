@@ -50,3 +50,5 @@
     test = PyKinectRuntime.PyKinectRuntime.get_last_depth_frame(kinect) 
     
     to get depth data but unsure, search more of it tomorrow
+    
+    test depth.py able to export depth data into numpy array
