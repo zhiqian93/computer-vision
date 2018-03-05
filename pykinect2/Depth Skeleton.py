@@ -7,6 +7,8 @@ import ctypes
 import pygame
 import sys
 import numpy as np
+import pandas as pd
+import cv2
 
 if sys.hexversion >= 0x03000000:
     import _thread as thread
@@ -196,6 +198,12 @@ class BodyGameRuntime(object):
 
             # --- Limit to 60 frames per second
             self._clock.tick(60)
+
+            test = PyKinectRuntime.PyKinectRuntime.get_last_depth_frame(self._kinect)
+
+            hohoho = pd.DataFrame(test)
+            print(hohoho)
+
 
         # Close our Kinect sensor, close the window and quit.
         self._kinect.close()

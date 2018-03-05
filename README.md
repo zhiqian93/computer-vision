@@ -43,4 +43,10 @@
             c. ESP8266 [haven't buy]
             d. Disp Box [haven't collect/print]
             
-            
+5 March: 
+
+    Trying to use:
+    kinect = PyKinectRuntime.PyKinectRuntime(PyKinectV2.FrameSourceTypes_Depth)
+    test = PyKinectRuntime.PyKinectRuntime.get_last_depth_frame(kinect) 
+    
+    to get depth data but unsure, search more of it tomorrow
