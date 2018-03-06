@@ -14,11 +14,11 @@ while(True):
 		frame = kinect.get_last_depth_frame()
 		break
 
-frame = frame.reshape((424,512))
+frame = frame.reshape((424, 512))
 
 # maximum = np.amax(frame)
 # print maximum
-np.save("StableOutput_Depth4",frame)
+np.save("StableOutput_Depth4", frame)
 # frame = (frame/50)
 
 
