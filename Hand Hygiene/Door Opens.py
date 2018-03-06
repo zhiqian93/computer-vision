@@ -4,7 +4,7 @@ from pykinect2.PyKinectV2 import *
 from pykinect2 import PyKinectRuntime
 import numpy as np
 
-def door_open():
+class door_open():
     # Initialize Kinect
     kinect = PyKinectRuntime.PyKinectRuntime(PyKinectV2.FrameSourceTypes_Color | PyKinectV2.FrameSourceTypes_Depth)
     print(type(kinect))
@@ -31,9 +31,12 @@ def door_open():
     # https://stackoverflow.com/questions/45435441/range-of-values-for-depth-images-generated-by-kinect-v1
 
     # Assume door is closed initially, opening the door will activate.
-    # hard code version: (if average distance > 3m)
     print(np.average(door))
 
+    # background subtraction method
+
+
+    # hard code version: (if average distance > 3m)
     if np.average(door) > 3000:
         return True
 
