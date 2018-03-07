@@ -20,7 +20,6 @@ class door_open():
         self.frame = self.frame.reshape((424, 512))
         self.data = np.asarray(self.frame)
 
-
     # Kinect is able to track from 0.5m to 4.5 m
     # pixel values: 0 - 4500 (near - far)
     # https://stackoverflow.com/questions/45435441/range-of-values-for-depth-images-generated-by-kinect-v1
@@ -41,7 +40,6 @@ class door_open():
                 continue
 
             frameDelta = cv2.absdiff(self.firstFrame, self.frame)
-
             thresh = cv2.threshold(frameDelta, 25, 255, cv2.THRESH_BINARY)[1]
 
             # dilate the thresholded image to fill in holes, then find contours on thresholded image
@@ -56,7 +54,6 @@ class door_open():
 
                 else:
                     return True
-
 
     def manual_find(self):
         # use manual method to find where door is:
