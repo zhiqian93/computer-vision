@@ -60,14 +60,12 @@ class door_open():
         # data[row, columns] chooses the spot, so as the door is in the middle right corner,
         # row: 78 - 345
         # column: 336 - 394
-
         door = self.data[78:345, 336:394]
 
         # Assume door is closed initially, opening the door will activate.
         print(np.average(door))
 
         # hard code version: (if average distance > 3m)
-
         if np.average(door) > 3000:
             return True
 
