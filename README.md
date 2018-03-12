@@ -61,4 +61,4 @@
     Collision of bounding box haven't started
 
 Code Logic:
-![picture](img/C:\Users\Hen Zhi Qian\Documents\GitHub\computer-vision\HH Structure.png)
+![picture](img/https://github.com/zhiqian93/computer-vision/blob/master/HH%20Structure.png)
