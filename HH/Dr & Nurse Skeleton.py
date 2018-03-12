@@ -5,6 +5,9 @@ import ctypes
 import pygame
 import sys
 import numpy as np
+import importlib
+
+importlib.import_module('Background Subtraction', package='HH')
 
 if sys.hexversion >= 0x03000000:
     import _thread as thread
@@ -20,7 +23,7 @@ SKELETON_COLORS = [pygame.color.THECOLORS["red"],
                    pygame.color.THECOLORS["yellow"],
                    pygame.color.THECOLORS["violet"]]
 
-
+# Capture bodies
 class BodyGameRuntime(object):
     def __init__(self):
         pygame.init()

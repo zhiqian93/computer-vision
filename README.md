@@ -52,3 +52,10 @@
     to get depth data but unsure, search more of it tomorrow
     
     test depth.py able to export depth data into numpy array
+    
+12 March:
+
+    Door Open done
+    Track HH needs to define rectangle shape of HH disp
+    Dr and Nurse Skeleton need to differentiate from initial location
+    Collision of bounding box haven't started
