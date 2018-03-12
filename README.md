@@ -59,3 +59,6 @@
     Track HH needs to define rectangle shape of HH disp
     Dr and Nurse Skeleton need to differentiate from initial location
     Collision of bounding box haven't started
+
+Code Logic:
+![picture](img/C:\Users\Hen Zhi Qian\Documents\GitHub\computer-vision\HH Structure.png)
