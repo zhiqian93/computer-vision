@@ -59,6 +59,9 @@
     Track HH needs to define rectangle shape of HH disp
     Dr and Nurse Skeleton need to differentiate from initial location
     Collision of bounding box haven't started
+   
+Important: Some camera are connected to Kinect but some are used with laptop webcam.
+Regardless, parse camera video file as --v input.
 
 Code Logic:
 ![picture](https://github.com/zhiqian93/computer-vision/blob/master/HH%20Structure.png)
