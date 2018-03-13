@@ -65,3 +65,8 @@ Regardless, parse camera video file as --v input.
 
 Code Logic:
 ![picture](https://github.com/zhiqian93/computer-vision/blob/master/HH%20Structure.png)
+
+13 March:
+
+    Ignore bounding box, collision can be done in a simpler way:
+    When the hand joints of the clinician is moving towards the patient, trigger HH moment 1.

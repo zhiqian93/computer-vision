@@ -16,7 +16,7 @@ class door_open():
                 self.frame = self.kinect.get_last_depth_frame()
                 break
 
-        # Reshape in array of 424 x 512
+        # Reshape depth in array of 424 x 512
         self.frame = self.frame.reshape((424, 512))
         self.data = np.asarray(self.frame)
 
