@@ -5,9 +5,11 @@ import ctypes
 import pygame
 import sys
 import numpy as np
+import cv2
+
 import importlib
 
-importlib.import_module('Background Subtraction', package='HH')
+#importlib.import_module('Background Subtraction', package='HH')
 
 if sys.hexversion >= 0x03000000:
     import _thread as thread
@@ -26,6 +28,7 @@ SKELETON_COLORS = [pygame.color.THECOLORS["red"],
 # Capture bodies
 class BodyGameRuntime(object):
     def __init__(self):
+
         pygame.init()
         myfont = pygame.font.SysFont("monospace", 15)
 
@@ -131,8 +134,12 @@ class BodyGameRuntime(object):
 
     def run(self):
         # -------- Main Program Loop -----------
+        file_num = 0
+        entrance = 0
+
         while not self._done:
             # --- Main event loop
+            key = cv2.waitKey(1) & 0xFF
             for event in pygame.event.get():  # User did something
                 if event.type == pygame.QUIT:  # If user clicked close
                     self._done = True  # Flag that we are done so we exit this loop
@@ -142,8 +149,6 @@ class BodyGameRuntime(object):
                                                            pygame.HWSURFACE | pygame.DOUBLEBUF | pygame.RESIZABLE, 32)
 
             # --- Game logic should go here
-
-
             # --- Getting frames and drawing
             # --- Woohoo! We've got a color frame! Let's fill out back buffer surface with frame's data
             if self._kinect.has_new_depth_frame():
@@ -174,6 +179,12 @@ class BodyGameRuntime(object):
             h_to_w = float(self._frame_surface.get_height()) / float(self._frame_surface.get_width())
             target_height = int(h_to_w * self._screen.get_width())
             surface_to_draw = pygame.transform.scale(self._frame_surface, (self._screen.get_width(), target_height));
+
+            # pygame.surface to numpy array
+            imgdata = pygame.surfarray.array2d(surface_to_draw)
+            # swap two axes
+            imgdata2 = imgdata.transpose()
+
             self._screen.blit(surface_to_draw, (0, 0))
             surface_to_draw = None
             pygame.display.update()
@@ -181,13 +192,16 @@ class BodyGameRuntime(object):
             # --- Go ahead and update the screen with what we've drawn.
             pygame.display.flip()
 
+            # --- Save video using opencv
+            cv2.imshow("Frames", imgdata)
+            cv2.imshow("Flipped", imgdata2)
+
             # --- Limit to 60 frames per second
             self._clock.tick(60)
 
         # Close our Kinect sensor, close the window and quit.
         self._kinect.close()
         pygame.quit()
-
 
 __main__ = "Kinect v2 Body Game"
 game = BodyGameRuntime();
