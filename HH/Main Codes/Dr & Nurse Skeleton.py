@@ -137,6 +137,10 @@ class BodyGameRuntime(object):
         file_num = 0
         entrance = 0
 
+        # Define the codec and create VideoWriter object
+        fourcc = cv2.VideoWriter_fourcc(*'XVID')
+        out = cv2.VideoWriter('output.avi', fourcc, 20.0, (self._frame_surface.get_width(), self._frame_surface.get_height()))
+
         while not self._done:
             # --- Main event loop
             key = cv2.waitKey(1) & 0xFF
@@ -181,9 +185,11 @@ class BodyGameRuntime(object):
             surface_to_draw = pygame.transform.scale(self._frame_surface, (self._screen.get_width(), target_height));
 
             # pygame.surface to numpy array
-            imgdata = pygame.surfarray.array2d(surface_to_draw)
+            imgdata = pygame.surfarray.array3d(surface_to_draw)
             # swap two axes
-            imgdata2 = imgdata.transpose()
+            imgdata = np.rot90(imgdata, -1)
+            # flip left right
+            imgdata2 = np.fliplr(imgdata)
 
             self._screen.blit(surface_to_draw, (0, 0))
             surface_to_draw = None
@@ -193,8 +199,12 @@ class BodyGameRuntime(object):
             pygame.display.flip()
 
             # --- Save video using opencv
+            out.write(imgdata2)
             cv2.imshow("Frames", imgdata)
             cv2.imshow("Flipped", imgdata2)
+
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
 
             # --- Limit to 60 frames per second
             self._clock.tick(60)
