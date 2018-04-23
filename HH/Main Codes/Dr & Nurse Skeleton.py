@@ -6,6 +6,7 @@ import pygame
 import sys
 import numpy as np
 import cv2
+import time
 
 import importlib
 
@@ -31,6 +32,13 @@ class BodyGameRuntime(object):
 
         pygame.init()
         myfont = pygame.font.SysFont("monospace", 15)
+
+        # Video length in seconds
+        self._captureTime = 21600
+        self.dr_id = 0
+        self.patient_id = 0
+        self.body_position = (0, 0)
+        self.tracked_bodies = []
 
         # Used to manage how fast the screen updates
         self._clock = pygame.time.Clock()
@@ -121,6 +129,8 @@ class BodyGameRuntime(object):
                             PyKinectV2.JointType_HandTipLeft);
         self.draw_body_bone(joints, jointPoints, depth, PyKinectV2.JointType_WristLeft, PyKinectV2.JointType_ThumbLeft);
 
+        self.body_position = (jointPoints[PyKinectV2.JointType_SpineMid].x, jointPoints[PyKinectV2.JointType_SpineMid].y)
+
     def draw_depth_frame(self, frame, target_surface):
         if frame is None:  # some usb hub do not provide the infrared image. it works with Kinect studio though
             return
@@ -138,8 +148,11 @@ class BodyGameRuntime(object):
         entrance = 0
 
         # Define the codec and create VideoWriter object
-        fourcc = cv2.VideoWriter_fourcc(*'XVID')
-        out = cv2.VideoWriter('output.avi', fourcc, 20.0, (self._frame_surface.get_width(), self._frame_surface.get_height()))
+        fourcc = cv2.VideoWriter_fourcc(*'DIVX')
+        out = cv2.VideoWriter('test.mkv', fourcc, 20.0, (self._frame_surface.get_width(), self._frame_surface.get_height()))
+        start_time = time.time()
+        previous_time = start_time
+        delta_minutes = 0
 
         while not self._done:
             # --- Main event loop
@@ -169,14 +182,33 @@ class BodyGameRuntime(object):
             if self._bodies is not None:
                 for i in range(0, self._kinect.max_body_count):
                     body = self._bodies.bodies[i]
-                    if not body.is_tracked:
-                        continue
+                    if body.is_tracked:
+                        joints = body.joints
+                        # convert joint coordinates to color space
+                        joint_points = self._kinect.body_joints_to_depth_space(joints)
+                        self.draw_body(joints, joint_points, SKELETON_COLORS[i])
 
-                    joints = body.joints
-                    # convert joint coordinates to color space
-                    joint_points = self._kinect.body_joints_to_depth_space(joints)
-                    self.draw_body(joints, joint_points, SKELETON_COLORS[i])
-                    # print("sketch drawn")
+                        # Initialize, track dr
+                        if body.tracking_id not in self.tracked_bodies and self.body_position > (250, ):
+                            print("{0}: Dr!".format(body.tracking_id))
+                            self.dr_id = body.tracking_id
+                            self.tracked_bodies.append(body.tracking_id)
+
+                        if body.tracking_id not in self.tracked_bodies and self.body_position < (150, ):
+                            print("{0}: Patient!".format(body.tracking_id))
+                            self.patient_id = body.tracking_id
+                            self.tracked_bodies.append(body.tracking_id)
+
+                    for j in range(0, len(self.tracked_bodies)):
+                        if self.tracked_bodies[j] == self.dr_id:
+                            label_dr = pygame.font.SysFont("bold", 40).render("Clinician", 1, (155, 155, 155))
+                            self._frame_surface.blit(label_dr, (joint_points[PyKinectV2.JointType_Head].x-25,
+                                                                        joint_points[PyKinectV2.JointType_Head].y-50))
+
+                        if self.tracked_bodies[j] == self.patient_id:
+                            label_ptnt = pygame.font.SysFont("bold", 40).render("Patient", 1, (255, 155, 155))
+                            self._frame_surface.blit(label_ptnt, (joint_points[PyKinectV2.JointType_Head].x - 25,
+                                                                          joint_points[PyKinectV2.JointType_Head].y - 50))
 
             # --- copy back buffer surface pixels to the screen, resize it if needed and keep aspect ratio
             # --- (screen size may be different from Kinect's color frame size)
@@ -189,21 +221,27 @@ class BodyGameRuntime(object):
             # swap two axes
             imgdata = np.rot90(imgdata, -1)
             # flip left right
-            imgdata2 = np.fliplr(imgdata)
+            imgdata = np.fliplr(imgdata)
 
             self._screen.blit(surface_to_draw, (0, 0))
             surface_to_draw = None
-            pygame.display.update()
 
             # --- Go ahead and update the screen with what we've drawn.
+            pygame.display.update()
             pygame.display.flip()
 
             # --- Save video using opencv
-            out.write(imgdata2)
+            out.write(imgdata)
             cv2.imshow("Frames", imgdata)
-            cv2.imshow("Flipped", imgdata2)
 
-            if cv2.waitKey(1) & 0xFF == ord('q'):
+            delta_seconds = (time.time() - previous_time)
+            if delta_seconds > 60:
+                delta_minutes += 1
+                previous_time = time.time()
+                print("%s minutes" % delta_minutes)
+            # print("--- %s seconds ---" % (time.time() - start_time))
+
+            if cv2.waitKey(1) & 0xFF == ord('q') or ((time.time() - start_time) > self._captureTime):
                 break
 
             # --- Limit to 60 frames per second
@@ -213,7 +251,7 @@ class BodyGameRuntime(object):
         self._kinect.close()
         pygame.quit()
 
-__main__ = "Kinect v2 Body Game"
+__main__ = "HH detection"
 game = BodyGameRuntime();
 game.run();
 

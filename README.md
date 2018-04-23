@@ -70,3 +70,22 @@ Code Logic:
 
     Ignore bounding box, collision can be done in a simpler way:
     When the hand joints of the clinician is moving towards the patient, trigger HH moment 1.
+
+23 April:
+    
+    cv.writer unable to write more than 2GB AVI files, most likely due to file type error.
+    Solution could be:
+    1. Use ffmpeg as an external codec
+    2. Internally switch to DIVX (previously XVID) and output .mkv files.
+    
+    Also, automatically stops capturing once time is reached.
+    
+    To fix: Patient and Drs surface.blit clashes.
+    
+IMPORTANT:
+
+     How to capture skeleton coordinates:
+     In function draw_body(self, joints, jointPoints, depth),
+     use jointPoints[PyKinectV2.JointType_Head].x
+     
+     Similarly in function run(self), use joint_points[PyKinectV2.JointType_Head].x 
