@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="050b800a-a7ea-4a7e-a2d9-bdad5b9c0d74" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/computer-vision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/computer-vision.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Nurse Skeleton.py" beforeDir="false" afterPath="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Nurse Skeleton.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
@@ -19,11 +17,23 @@
     <splitter split-orientation="horizontal" split-proportion="0.51488096">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Dr &amp; Nurse Skeleton.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SPLIT">
+                  <first_editor relative-caret-position="246">
+                    <caret line="83" column="57" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+                  </first_editor>
+                  <second_editor />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Dr &amp; Nurse Skeleton.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Nurse Skeleton.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="185">
-                  <caret line="203" column="46" selection-start-line="203" selection-start-column="46" selection-end-line="203" selection-end-column="46" />
+                <state relative-caret-position="84">
+                  <caret line="182" column="48" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="48" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
@@ -31,11 +41,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PyKinectV2.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="PyKinectV2.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pykinect2/PyKinectV2.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="169">
-                  <caret line="1023" column="6" selection-start-line="1023" selection-end-line="1023" selection-end-column="6" />
+                  <caret line="1810" column="6" selection-start-line="1810" selection-end-line="1810" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -56,22 +66,10 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/README.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="467">
-                    <caret line="88" column="83" selection-start-line="88" selection-start-column="83" selection-end-line="88" selection-end-column="83" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="test depth.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Hand Hygiene/test depth.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
+                <state relative-caret-position="232">
                   <caret line="29" selection-start-line="29" selection-end-line="29" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
@@ -80,11 +78,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PyKinectRuntime.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="PyKinectRuntime.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pykinect2/PyKinectRuntime.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="451" column="28" selection-start-line="457" selection-start-column="27" selection-end-line="457" selection-end-column="39" />
+                <state relative-caret-position="332">
+                  <caret line="472" selection-start-line="472" selection-end-line="472" />
                 </state>
               </provider>
             </entry>
@@ -103,18 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>frame</find>
-      <find>draw_depth</find>
-      <find>pygame.Sur</find>
-      <find>surface</find>
-      <find>self.tracked</find>
-      <find>self._bodies</find>
-      <find>jointtype_head</find>
-      <find>screen</find>
-      <find>_frame_sur</find>
-      <find>_screen</find>
-      <find>body_joints_to_depth_space</find>
-      <find>trackin</find>
       <find>id</find>
       <find>tracking_id</find>
       <find>joint</find>
@@ -131,8 +117,20 @@
       <find>max</find>
       <find>engaged</find>
       <find>body.engaged</find>
-      <find>_Joint</find>
       <find>body.joints</find>
+      <find>body</find>
+      <find>is_trac</find>
+      <find>bodies.bod</find>
+      <find>bodies</find>
+      <find>get_last_bo</find>
+      <find>_body_frame_bodies</find>
+      <find>KinectBodyFrameData</find>
+      <find>KinectBody</find>
+      <find>Lean</find>
+      <find>GetJoints</find>
+      <find>lean</find>
+      <find>_kinect.</find>
+      <find>_Joint</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,7 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pykinect2/PyKinectRuntime.py" />
         <option value="$PROJECT_DIR$/../PyKinect2/examples/Eye Clinic HH.py" />
         <option value="$PROJECT_DIR$/pykinect2/Tracking Patient.py" />
         <option value="$PROJECT_DIR$/pykinect2/Send HTTP request.py" />
@@ -174,8 +171,9 @@
         <option value="$PROJECT_DIR$/HH/Main Codes/Simple Collision.py" />
         <option value="$PROJECT_DIR$/HH/Main Codes/Background Subtraction.py" />
         <option value="$PROJECT_DIR$/HH/Main Codes/save video.py" />
-        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/pykinect2/PyKinectRuntime.py" />
         <option value="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Nurse Skeleton.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -585,7 +583,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520911607722</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="13 March">
+      <created>1524479520899</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1524479520899</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -657,7 +662,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -883,16 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hand Hygiene/test depth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/motion-detector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -903,17 +898,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pykinect2/PyKinectRuntime.py">
+    <entry file="file://$PROJECT_DIR$/Hand Hygiene/test depth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="451" column="28" selection-start-line="457" selection-start-column="27" selection-end-line="457" selection-end-column="39" />
+        <state relative-caret-position="232">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pykinect2/PyKinectV2.py">
+    <entry file="file://$PROJECT_DIR$/pykinect2/PyKinectRuntime.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="1023" column="6" selection-start-line="1023" selection-end-line="1023" selection-end-column="6" />
+        <state relative-caret-position="332">
+          <caret line="472" selection-start-line="472" selection-end-line="472" />
         </state>
       </provider>
     </entry>
@@ -925,8 +923,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="467">
-            <caret line="88" column="83" selection-start-line="88" selection-start-column="83" selection-end-line="88" selection-end-column="83" />
+          <first_editor relative-caret-position="246">
+            <caret line="83" column="57" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
           </first_editor>
           <second_editor />
         </state>
@@ -934,11 +932,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Nurse Skeleton.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="203" column="46" selection-start-line="203" selection-start-column="46" selection-end-line="203" selection-end-column="46" />
+        <state relative-caret-position="84">
+          <caret line="182" column="48" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="48" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pykinect2/PyKinectV2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="1810" column="6" selection-start-line="1810" selection-end-line="1810" selection-end-column="6" />
         </state>
       </provider>
     </entry>

@@ -80,7 +80,8 @@ Code Logic:
     
     Also, automatically stops capturing once time is reached.
     
-    To fix: Patient and Drs surface.blit clashes.
+    To fix: Patient and Drs surface.blit clashes. [DONE]
+    Find what is self.joints in PyKinectRuntime.py class KinectBody 
     
 IMPORTANT:
 
@@ -89,3 +90,8 @@ IMPORTANT:
      use jointPoints[PyKinectV2.JointType_Head].x
      
      Similarly in function run(self), use joint_points[PyKinectV2.JointType_Head].x 
+     
+     body = self._bodies reads from PyKinectRuntime.py. Mainly from KinectBodyFrameData 
+     body = self._bodies.bodies[i] reads from class KinectBody, so should focus more on this specific class
+     
+     Find a way to read ctypes.cast in python

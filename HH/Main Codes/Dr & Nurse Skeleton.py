@@ -183,6 +183,8 @@ class BodyGameRuntime(object):
                 for i in range(0, self._kinect.max_body_count):
                     body = self._bodies.bodies[i]
                     if body.is_tracked:
+                        print([body.joints])
+
                         joints = body.joints
                         # convert joint coordinates to color space
                         joint_points = self._kinect.body_joints_to_depth_space(joints)
