@@ -7,6 +7,7 @@ import sys
 import numpy as np
 import cv2
 import time
+import math
 
 import importlib
 
@@ -37,6 +38,7 @@ class BodyGameRuntime(object):
         self._captureTime = 21600
         self.dr_id = 0
         self.patient_id = 0
+        self.id = 0
         self.body_position = (0, 0)
         self.tracked_bodies = []
 
@@ -144,15 +146,16 @@ class BodyGameRuntime(object):
 
     def run(self):
         # -------- Main Program Loop -----------
-        file_num = 0
-        entrance = 0
-
         # Define the codec and create VideoWriter object
         fourcc = cv2.VideoWriter_fourcc(*'DIVX')
         out = cv2.VideoWriter('test.mkv', fourcc, 20.0, (self._frame_surface.get_width(), self._frame_surface.get_height()))
         start_time = time.time()
         previous_time = start_time
         delta_minutes = 0
+        dr_track_id = 7
+        patient_track_id = 7
+        position_dr = None
+        position_patient = None
 
         while not self._done:
             # --- Main event loop
@@ -182,36 +185,86 @@ class BodyGameRuntime(object):
             if self._bodies is not None:
                 for i in range(0, self._kinect.max_body_count):
                     body = self._bodies.bodies[i]
-                    if body.is_tracked:
-                        # print(body.joints[1])
-                        print(body.joints.contents)
+                    if not body.is_tracked:
+                        continue
 
-                        joints = body.joints
+                    joints = body.joints
+                    joint_points = self._kinect.body_joints_to_depth_space(joints)
+
+                    print(i, "  ", dr_track_id, "  ", patient_track_id)
+                    print(body.tracking_id)
+
+                    # Initialize, track dr
+                    if body.tracking_id not in self.tracked_bodies and (joint_points[PyKinectV2.JointType_SpineMid].x > 350):
+                        # print("{0}: Dr!".format(body.tracking_id))
+                        self.tracked_bodies.append(body.tracking_id)
+                        dr_track_id = i
+                        print("in dr")
+
+                    if body.tracking_id not in self.tracked_bodies and (0 < joint_points[PyKinectV2.JointType_SpineMid].x < 150):
+                        # print("{0}: Patient!".format(body.tracking_id))
+                        self.tracked_bodies.append(body.tracking_id)
+                        patient_track_id = i
+                        print("in patient")
+
+                    if i == dr_track_id and i != patient_track_id:
+                        print("dr tracked")
+                        body_dr = self._bodies.bodies[dr_track_id]
+                        joints_dr = body_dr.joints
                         # convert joint coordinates to color space
-                        joint_points = self._kinect.body_joints_to_depth_space(joints)
-                        self.draw_body(joints, joint_points, SKELETON_COLORS[i])
+                        joint_points_dr = self._kinect.body_joints_to_depth_space(joints_dr)
+                        self.draw_body(joints_dr, joint_points_dr, SKELETON_COLORS[3])
+                        label_dr = pygame.font.SysFont("bold", 40).render("Clinician", 1, (155, 155, 155))
+                        try:
+                            self._frame_surface.blit(label_dr, (joint_points_dr[PyKinectV2.JointType_Head].x - 25,
+                                                            joint_points_dr[PyKinectV2.JointType_Head].y - 50))
+                        except TypeError:
+                            continue
+                        position_dr = [joint_points_dr[PyKinectV2.JointType_SpineMid].x,
+                                       joint_points_dr[PyKinectV2.JointType_SpineMid].y]
 
-                        # Initialize, track dr
-                        if body.tracking_id not in self.tracked_bodies and self.body_position > (250, ):
-                            print("{0}: Dr!".format(body.tracking_id))
-                            self.dr_id = body.tracking_id
-                            self.tracked_bodies.append(body.tracking_id)
+                    # Use else if instead of if, so that we track drs first
+                    if i == patient_track_id and i != dr_track_id:
+                        print("patients tracked")
+                        body_patient = self._bodies.bodies[patient_track_id]
+                        joints_patient = body_patient.joints
+                        # convert joint coordinates to color space
+                        joint_points_patient = self._kinect.body_joints_to_depth_space(joints_patient)
+                        self.draw_body(joints_patient, joint_points_patient, SKELETON_COLORS[6])
+                        label_ptnt = pygame.font.SysFont("bold", 40).render("Patient", 1, (255, 155, 155))
+                        try:
+                            self._frame_surface.blit(label_ptnt,
+                                                     (joint_points_patient[PyKinectV2.JointType_Head].x - 25,
+                                                      joint_points_patient[PyKinectV2.JointType_Head].y - 50))
+                        except TypeError:
+                            continue
+                        position_patient = [joint_points_patient[PyKinectV2.JointType_SpineMid].x,
+                                            joint_points_patient[PyKinectV2.JointType_SpineMid].y]
 
-                        if body.tracking_id not in self.tracked_bodies and self.body_position < (150, ):
-                            print("{0}: Patient!".format(body.tracking_id))
-                            self.patient_id = body.tracking_id
-                            self.tracked_bodies.append(body.tracking_id)
+                    # else:
+                    #     if i == patient_track_id:
+                    #         print("patients tracked")
+                    #         body_patient = self._bodies.bodies[patient_track_id]
+                    #         joints_patient = body_patient.joints
+                    #         # convert joint coordinates to color space
+                    #         joint_points_patient = self._kinect.body_joints_to_depth_space(joints_patient)
+                    #         self.draw_body(joints_patient, joint_points_patient, SKELETON_COLORS[6])
+                    #         label_ptnt = pygame.font.SysFont("bold", 40).render("Patient", 1, (255, 155, 155))
+                    #         try:
+                    #             self._frame_surface.blit(label_ptnt, (joint_points_patient[PyKinectV2.JointType_Head].x - 25,
+                    #                                               joint_points_patient[PyKinectV2.JointType_Head].y - 50))
+                    #         except TypeError:
+                    #             continue
+                    #         position_patient = [joint_points_patient[PyKinectV2.JointType_SpineMid].x,
+                    #                             joint_points_patient[PyKinectV2.JointType_SpineMid].y]
 
-                    for j in range(0, len(self.tracked_bodies)):
-                        if self.tracked_bodies[j] == self.dr_id:
-                            label_dr = pygame.font.SysFont("bold", 40).render("Clinician", 1, (155, 155, 155))
-                            self._frame_surface.blit(label_dr, (joint_points[PyKinectV2.JointType_Head].x-25,
-                                                                        joint_points[PyKinectV2.JointType_Head].y-50))
+            #         print(i, "  ", dr_track_id, "  ", patient_track_id)
+            #         if position_patient and position_dr is not None:
+            #             continue
+            #             # print(math.hypot((position_dr[0] - position_patient[0]), position_dr[1] - position_patient[1]))
 
-                        if self.tracked_bodies[j] == self.patient_id:
-                            label_ptnt = pygame.font.SysFont("bold", 40).render("Patient", 1, (255, 155, 155))
-                            self._frame_surface.blit(label_ptnt, (joint_points[PyKinectV2.JointType_Head].x - 25,
-                                                                          joint_points[PyKinectV2.JointType_Head].y - 50))
+            pygame.draw.rect(self._frame_surface, (155, 155, 155), (350, 0, 200, 500), 4)
+            pygame.draw.rect(self._frame_surface, (255, 155, 155), (0, 0, 150, 500), 4)
 
             # --- copy back buffer surface pixels to the screen, resize it if needed and keep aspect ratio
             # --- (screen size may be different from Kinect's color frame size)
@@ -230,12 +283,12 @@ class BodyGameRuntime(object):
             surface_to_draw = None
 
             # --- Go ahead and update the screen with what we've drawn.
-            pygame.display.update()
-            pygame.display.flip()
+            # pygame.display.update()
+            # pygame.display.flip()
 
             # --- Save video using opencv
             out.write(imgdata)
-            cv2.imshow("Frames", imgdata)
+            cv2.imshow("HH Detection Frames", imgdata)
 
             delta_seconds = (time.time() - previous_time)
             if delta_seconds > 60:

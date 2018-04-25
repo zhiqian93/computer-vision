@@ -95,3 +95,13 @@ IMPORTANT:
      body = self._bodies.bodies[i] reads from class KinectBody, so should focus more on this specific class
      
      Find a way to read ctypes.cast in python
+     
+25 April:
+
+    1. Initialize a dummy joint for us to check if its a dr/patient.
+    2. Used Try and Error exception when blit is too close to screen sides.
+    3. Solved patient turning into dr (vice versa) by:
+    - append body.tracking_id to self.tracked_bodies
+    - i = dr_id != patient_id
+    
+    **Have to clean up the code for id, better just use one list to contain all detail, MUST DO LATER
