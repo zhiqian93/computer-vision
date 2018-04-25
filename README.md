@@ -103,5 +103,8 @@ IMPORTANT:
     3. Solved patient turning into dr (vice versa) by:
     - append body.tracking_id to self.tracked_bodies
     - i = dr_id != patient_id
+    4. Error in playing audio.
+    5. Next step would be to link esp8266 to laptop/UP Board
+ 
     
     **Have to clean up the code for id, better just use one list to contain all detail, MUST DO LATER

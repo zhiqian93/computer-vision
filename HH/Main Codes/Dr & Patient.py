@@ -50,7 +50,7 @@ class BodyGameRuntime(object):
         self._screen = pygame.display.set_mode((self._infoObject.current_w >> 1, self._infoObject.current_h >> 1),
                                                pygame.HWSURFACE | pygame.DOUBLEBUF | pygame.RESIZABLE, 32)
 
-        pygame.display.set_caption("Kinect for Windows v2 Body Game")
+        pygame.display.set_caption("CSC Hand Hygiene Kinect V19")
 
         # Loop until the user clicks the close button.
         self._done = False
@@ -154,7 +154,11 @@ class BodyGameRuntime(object):
         delta_minutes = 0
         dr_track_id = 7
         patient_track_id = 7
-        position_dr = None
+        case = " "
+        position_dr_righttip = None
+        position_dr_lefttip = None
+        position_dr_righthand = None
+        position_dr_lefthand = None
         position_patient = None
 
         while not self._done:
@@ -220,10 +224,15 @@ class BodyGameRuntime(object):
                                                             joint_points_dr[PyKinectV2.JointType_Head].y - 50))
                         except TypeError:
                             continue
-                        position_dr_left = [joint_points_dr[PyKinectV2.JointType_HandTipLeft].x,
+                        position_dr_lefttip = [joint_points_dr[PyKinectV2.JointType_HandTipLeft].x,
                                             joint_points_dr[PyKinectV2.JointType_HandTipLeft].y]
-                        position_dr_right = [joint_points_dr[PyKinectV2.JointType_HandTipRight].x,
+                        position_dr_righttip = [joint_points_dr[PyKinectV2.JointType_HandTipRight].x,
                                             joint_points_dr[PyKinectV2.JointType_HandTipRight].y]
+
+                        position_dr_lefthand = [joint_points_dr[PyKinectV2.JointType_HandTipLeft].x,
+                                            joint_points_dr[PyKinectV2.JointType_HandTipLeft].y]
+                        position_dr_righthand = [joint_points_dr[PyKinectV2.JointType_HandTipRight].x,
+                                             joint_points_dr[PyKinectV2.JointType_HandTipRight].y]
 
                     if i == patient_track_id and i != dr_track_id:
                         # print("patients tracked")
@@ -260,28 +269,36 @@ class BodyGameRuntime(object):
                     #         position_patient = [joint_points_patient[PyKinectV2.JointType_SpineMid].x,
                     #                             joint_points_patient[PyKinectV2.JointType_SpineMid].y]
 
-                    # Distance between hands and patient spinemid
-                    if position_patient and position_dr_left and position_dr_right is not None:
-                        distance_left = math.hypot((position_dr_left[0] - position_patient[0]),
-                                                  position_dr_left[1] - position_patient[1])
-                        distance_right = math.hypot((position_dr_right[0] - position_patient[0]),
-                                                   position_dr_right[1] - position_patient[1])
-                        print(distance_left, distance_right)
+                    # Distance between hands and patient spine mid
+                    if position_patient and position_dr_lefttip and position_dr_righttip is not None:
+                        distance_left = math.hypot((position_dr_lefttip[0] - position_patient[0]),
+                                                  position_dr_lefttip[1] - position_patient[1])
+                        distance_right = math.hypot((position_dr_righttip[0] - position_patient[0]),
+                                                   position_dr_righttip[1] - position_patient[1])
+
                         if distance_left < 30 or distance_right < 30:
+                            case = "touched patient"
                             label_intersect = pygame.font.SysFont("bold", 40).render("Touching Patient!", 1,
                                                                                      (100, 155, 255))
                             self._frame_surface.blit(label_intersect, (0, 10))
 
                     # Distance between left and right hand
-                    if position_dr_right and position_dr_left is not None:
-                        distance = math.hypot((position_dr_left[0] - position_dr_right[0]),
-                                                position_dr_left[1] - position_dr_right[1])
-                        print(distance)
+                    if position_dr_righthand and position_dr_lefthand is not None:
+                        distance = math.hypot((position_dr_lefthand[0] - position_dr_righthand[0]),
+                                                position_dr_lefthand[1] - position_dr_righthand[1])
 
-                        if distance < 50:
-                            label_intersect = pygame.font.SysFont("bold", 40).render("HH Performed!", 1, (34, 139, 34))
-                            self._frame_surface.blit(label_intersect, (300, 10))
+                        if distance < 30:
+                            case = "HH Performed"
+                            label_hh = pygame.font.SysFont("bold", 40).render("HH Performed!", 1, (34, 139, 34))
+                            self._frame_surface.blit(label_hh, (300, 10))
+                            pygame.draw.circle(self._frame_surface, (34, 193, 34), (int(position_dr_lefthand[0]),
+                                                                                    int(position_dr_lefthand[1])), 20)
+                            pygame.draw.circle(self._frame_surface, (34, 193, 34), (int(position_dr_righthand[0]),
+                                                                                    int(position_dr_righthand[1])), 20)
 
+                    if case == "touched patient":
+                        label_intersect = pygame.font.SysFont("bold", 40).render("Touching Patient!", 1,
+                                                                                 (100, 155, 255))
 
                     # else:
                     #     if i == patient_track_id:
@@ -320,8 +337,8 @@ class BodyGameRuntime(object):
             surface_to_draw = None
 
             # --- Go ahead and update the screen with what we've drawn.
-            # pygame.display.update()
-            # pygame.display.flip()
+            pygame.display.update()
+            pygame.display.flip()
 
             # --- Save video using opencv
             out.write(imgdata)
