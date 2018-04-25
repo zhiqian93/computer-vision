@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="050b800a-a7ea-4a7e-a2d9-bdad5b9c0d74" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Nurse Skeleton.py" beforeDir="false" afterPath="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Nurse Skeleton.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient.py" beforeDir="false" afterPath="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4636905">
+    <splitter split-orientation="horizontal" split-proportion="0.53630954">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="PyKinectV2.py" pinned="false" current-in-tab="false">
@@ -30,8 +28,8 @@
           <file leaf-file-name="Dr &amp; Patient.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="271">
-                  <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
+                <state relative-caret-position="304">
+                  <caret line="281" column="74" selection-start-line="281" selection-start-column="74" selection-end-line="281" selection-end-column="74" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
@@ -71,8 +69,8 @@
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
-                  <first_editor relative-caret-position="498">
-                    <caret line="102" column="47" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
+                  <first_editor relative-caret-position="416">
+                    <caret line="106" column="101" selection-start-line="106" selection-start-column="101" selection-end-line="106" selection-end-column="101" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -611,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524486571074</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="25 April">
+      <created>1524646383076</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1524646383076</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -677,7 +682,8 @@
     <MESSAGE value="12 March" />
     <MESSAGE value="13 March" />
     <MESSAGE value="23 April" />
-    <option name="LAST_COMMIT_MESSAGE" value="23 April" />
+    <MESSAGE value="25 April" />
+    <option name="LAST_COMMIT_MESSAGE" value="25 April" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -950,8 +956,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="498">
-            <caret line="102" column="47" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
+          <first_editor relative-caret-position="416">
+            <caret line="106" column="101" selection-start-line="106" selection-start-column="101" selection-end-line="106" selection-end-column="101" />
           </first_editor>
           <second_editor />
         </state>
@@ -964,8 +970,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
+        <state relative-caret-position="304">
+          <caret line="281" column="74" selection-start-line="281" selection-start-column="74" selection-end-line="281" selection-end-column="74" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

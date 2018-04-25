@@ -191,8 +191,8 @@ class BodyGameRuntime(object):
                     joints = body.joints
                     joint_points = self._kinect.body_joints_to_depth_space(joints)
 
-                    print(i, "  ", dr_track_id, "  ", patient_track_id)
-                    print(body.tracking_id)
+                    # print(i, "  ", dr_track_id, "  ", patient_track_id)
+                    # print(body.tracking_id)
 
                     # Initialize, track dr
                     if body.tracking_id not in self.tracked_bodies and (joint_points[PyKinectV2.JointType_SpineMid].x > 350):
@@ -208,7 +208,7 @@ class BodyGameRuntime(object):
                         print("in patient")
 
                     if i == dr_track_id and i != patient_track_id:
-                        print("dr tracked")
+                        # print("dr tracked")
                         body_dr = self._bodies.bodies[dr_track_id]
                         joints_dr = body_dr.joints
                         # convert joint coordinates to color space
@@ -220,12 +220,13 @@ class BodyGameRuntime(object):
                                                             joint_points_dr[PyKinectV2.JointType_Head].y - 50))
                         except TypeError:
                             continue
-                        position_dr = [joint_points_dr[PyKinectV2.JointType_SpineMid].x,
-                                       joint_points_dr[PyKinectV2.JointType_SpineMid].y]
+                        position_dr_left = [joint_points_dr[PyKinectV2.JointType_HandTipLeft].x,
+                                            joint_points_dr[PyKinectV2.JointType_HandTipLeft].y]
+                        position_dr_right = [joint_points_dr[PyKinectV2.JointType_HandTipRight].x,
+                                            joint_points_dr[PyKinectV2.JointType_HandTipRight].y]
 
-                    # Use else if instead of if, so that we track drs first
                     if i == patient_track_id and i != dr_track_id:
-                        print("patients tracked")
+                        # print("patients tracked")
                         body_patient = self._bodies.bodies[patient_track_id]
                         joints_patient = body_patient.joints
                         # convert joint coordinates to color space
@@ -240,6 +241,47 @@ class BodyGameRuntime(object):
                             continue
                         position_patient = [joint_points_patient[PyKinectV2.JointType_SpineMid].x,
                                             joint_points_patient[PyKinectV2.JointType_SpineMid].y]
+                    # # Use else if instead of if, so that we track drs first
+                    # else:
+                    #     if i == patient_track_id and i != dr_track_id:
+                    #         # print("patients tracked")
+                    #         body_patient = self._bodies.bodies[patient_track_id]
+                    #         joints_patient = body_patient.joints
+                    #         # convert joint coordinates to color space
+                    #         joint_points_patient = self._kinect.body_joints_to_depth_space(joints_patient)
+                    #         self.draw_body(joints_patient, joint_points_patient, SKELETON_COLORS[6])
+                    #         label_ptnt = pygame.font.SysFont("bold", 40).render("Patient", 1, (255, 155, 155))
+                    #         try:
+                    #             self._frame_surface.blit(label_ptnt,
+                    #                                      (joint_points_patient[PyKinectV2.JointType_Head].x - 25,
+                    #                                       joint_points_patient[PyKinectV2.JointType_Head].y - 50))
+                    #         except TypeError:
+                    #             continue
+                    #         position_patient = [joint_points_patient[PyKinectV2.JointType_SpineMid].x,
+                    #                             joint_points_patient[PyKinectV2.JointType_SpineMid].y]
+
+                    # Distance between hands and patient spinemid
+                    if position_patient and position_dr_left and position_dr_right is not None:
+                        distance_left = math.hypot((position_dr_left[0] - position_patient[0]),
+                                                  position_dr_left[1] - position_patient[1])
+                        distance_right = math.hypot((position_dr_right[0] - position_patient[0]),
+                                                   position_dr_right[1] - position_patient[1])
+                        print(distance_left, distance_right)
+                        if distance_left < 30 or distance_right < 30:
+                            label_intersect = pygame.font.SysFont("bold", 40).render("Touching Patient!", 1,
+                                                                                     (100, 155, 255))
+                            self._frame_surface.blit(label_intersect, (0, 10))
+
+                    # Distance between left and right hand
+                    if position_dr_right and position_dr_left is not None:
+                        distance = math.hypot((position_dr_left[0] - position_dr_right[0]),
+                                                position_dr_left[1] - position_dr_right[1])
+                        print(distance)
+
+                        if distance < 50:
+                            label_intersect = pygame.font.SysFont("bold", 40).render("HH Performed!", 1, (34, 139, 34))
+                            self._frame_surface.blit(label_intersect, (300, 10))
+
 
                     # else:
                     #     if i == patient_track_id:
@@ -257,11 +299,6 @@ class BodyGameRuntime(object):
                     #             continue
                     #         position_patient = [joint_points_patient[PyKinectV2.JointType_SpineMid].x,
                     #                             joint_points_patient[PyKinectV2.JointType_SpineMid].y]
-
-            #         print(i, "  ", dr_track_id, "  ", patient_track_id)
-            #         if position_patient and position_dr is not None:
-            #             continue
-            #             # print(math.hypot((position_dr[0] - position_patient[0]), position_dr[1] - position_patient[1]))
 
             pygame.draw.rect(self._frame_surface, (155, 155, 155), (350, 0, 200, 500), 4)
             pygame.draw.rect(self._frame_surface, (255, 155, 155), (0, 0, 150, 500), 4)
