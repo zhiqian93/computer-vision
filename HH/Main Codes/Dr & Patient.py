@@ -276,7 +276,7 @@ class BodyGameRuntime(object):
                         distance_right = math.hypot((position_dr_righttip[0] - position_patient[0]),
                                                    position_dr_righttip[1] - position_patient[1])
 
-                        if distance_left < 30 or distance_right < 30:
+                        if distance_left < 50 or distance_right < 50:
                             case = "touched patient"
                             label_intersect = pygame.font.SysFont("bold", 40).render("Touching Patient!", 1,
                                                                                      (100, 155, 255))

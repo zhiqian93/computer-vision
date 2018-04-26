@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="050b800a-a7ea-4a7e-a2d9-bdad5b9c0d74" name="Default" comment="25 April">
-      <change afterPath="$PROJECT_DIR$/HH/Main Codes/test_music.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient.py" beforeDir="false" afterPath="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
@@ -21,7 +20,7 @@
           <file leaf-file-name="PyKinectV2.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pykinect2/PyKinectV2.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
+                <state relative-caret-position="12699">
                   <caret line="755" column="26" selection-start-line="755" selection-start-column="26" selection-end-line="755" selection-end-column="26" />
                 </state>
               </provider>
@@ -30,8 +29,8 @@
           <file leaf-file-name="Dr &amp; Patient.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-526">
-                  <caret line="301" lean-forward="true" selection-start-line="301" selection-end-line="301" />
+                <state relative-caret-position="293">
+                  <caret line="349" column="43" lean-forward="true" selection-start-line="349" selection-start-column="43" selection-end-line="349" selection-end-column="43" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
@@ -71,8 +70,8 @@
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
-                  <first_editor relative-caret-position="416">
-                    <caret line="106" column="60" selection-start-line="106" selection-start-column="60" selection-end-line="106" selection-end-column="60" />
+                  <first_editor relative-caret-position="324">
+                    <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -82,7 +81,7 @@
           <file leaf-file-name="test_music.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HH/Main Codes/test_music.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
+                <state relative-caret-position="102">
                   <caret line="7" selection-start-line="7" selection-end-line="19" selection-end-column="13" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
@@ -106,7 +105,7 @@
           <file leaf-file-name="PyKinectRuntime.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pykinect2/PyKinectRuntime.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-9">
+                <state relative-caret-position="7038">
                   <caret line="425" column="16" selection-start-line="425" selection-start-column="16" selection-end-line="425" selection-end-column="16" />
                 </state>
               </provider>
@@ -205,10 +204,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="3038" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -221,7 +220,7 @@
     <property name="SearchEverywhereHistoryKey" value="PyKinect&#9;null&#9;null&#10;PyKinectB&#9;null&#9;null" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/HH/Main Codes" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -638,17 +637,24 @@
       <option name="project" value="LOCAL" />
       <updated>1524648681150</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="25 April">
+      <created>1524653287552</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1524653287552</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3038" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.14714494" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5511905" side_tool="true" visible="true" weight="0.3600439" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.44880953" visible="true" weight="0.3600439" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5527086" side_tool="true" visible="true" weight="0.23529412" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.44729137" weight="0.29252782" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32922733" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -667,9 +673,9 @@
       <window_info anchor="right" id="Data View" order="3" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14714494" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -677,16 +683,16 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48035714" weight="0.2902519" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="R Packages" order="3" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32922733" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30641592" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.51964283" side_tool="true" visible="true" weight="0.29001585" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Data View" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Data View" order="5" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32922733" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -953,21 +959,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pykinect2/PyKinectV2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="12699">
           <caret line="755" column="26" selection-start-line="755" selection-start-column="26" selection-end-line="755" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pykinect2/PyKinectRuntime.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
+        <state relative-caret-position="7038">
           <caret line="425" column="16" selection-start-line="425" selection-start-column="16" selection-end-line="425" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HH/Main Codes/test_music.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="102">
           <caret line="7" selection-start-line="7" selection-end-line="19" selection-end-column="13" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -976,24 +982,24 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="416">
-            <caret line="106" column="60" selection-start-line="106" selection-start-column="60" selection-end-line="106" selection-end-column="60" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="324">
+            <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-526">
-          <caret line="301" lean-forward="true" selection-start-line="301" selection-end-line="301" />
+        <state relative-caret-position="293">
+          <caret line="349" column="43" lean-forward="true" selection-start-line="349" selection-start-column="43" selection-end-line="349" selection-end-column="43" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

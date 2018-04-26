@@ -105,6 +105,5 @@ IMPORTANT:
     - i = dr_id != patient_id
     4. Error in playing audio.
     5. Next step would be to link esp8266 to laptop/UP Board
- 
     
     **Have to clean up the code for id, better just use one list to contain all detail, MUST DO LATER
