@@ -300,23 +300,6 @@ class BodyGameRuntime(object):
                         label_intersect = pygame.font.SysFont("bold", 40).render("Touching Patient!", 1,
                                                                                  (100, 155, 255))
 
-                    # else:
-                    #     if i == patient_track_id:
-                    #         print("patients tracked")
-                    #         body_patient = self._bodies.bodies[patient_track_id]
-                    #         joints_patient = body_patient.joints
-                    #         # convert joint coordinates to color space
-                    #         joint_points_patient = self._kinect.body_joints_to_depth_space(joints_patient)
-                    #         self.draw_body(joints_patient, joint_points_patient, SKELETON_COLORS[6])
-                    #         label_ptnt = pygame.font.SysFont("bold", 40).render("Patient", 1, (255, 155, 155))
-                    #         try:
-                    #             self._frame_surface.blit(label_ptnt, (joint_points_patient[PyKinectV2.JointType_Head].x - 25,
-                    #                                               joint_points_patient[PyKinectV2.JointType_Head].y - 50))
-                    #         except TypeError:
-                    #             continue
-                    #         position_patient = [joint_points_patient[PyKinectV2.JointType_SpineMid].x,
-                    #                             joint_points_patient[PyKinectV2.JointType_SpineMid].y]
-
             pygame.draw.rect(self._frame_surface, (155, 155, 155), (350, 0, 200, 500), 4)
             pygame.draw.rect(self._frame_surface, (255, 155, 155), (0, 0, 150, 500), 4)
 
@@ -337,8 +320,8 @@ class BodyGameRuntime(object):
             surface_to_draw = None
 
             # --- Go ahead and update the screen with what we've drawn.
-            pygame.display.update()
-            pygame.display.flip()
+            # pygame.display.update()
+            # pygame.display.flip()
 
             # --- Save video using opencv
             out.write(imgdata)
