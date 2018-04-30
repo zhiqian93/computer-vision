@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="050b800a-a7ea-4a7e-a2d9-bdad5b9c0d74" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/HH/Main Codes/test server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,14 +27,23 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Dr &amp; Patient.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient.py">
+          <file leaf-file-name="Dr &amp; Patient_DEMO.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3366">
-                  <caret line="234" column="82" lean-forward="true" selection-start-line="234" selection-start-column="82" selection-end-line="234" selection-end-column="82" />
+                <state relative-caret-position="221">
+                  <caret line="318" column="54" selection-start-line="318" selection-start-column="54" selection-end-line="318" selection-end-column="54" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test server.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/HH/Main Codes/test server.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="153">
+                  <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
                 </state>
               </provider>
             </entry>
@@ -49,18 +60,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="motion-detector.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/motion-detector.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-                  <folding>
-                    <element signature="e#32#47#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -69,7 +68,7 @@
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
-                  <first_editor relative-caret-position="324">
+                  <first_editor relative-caret-position="512">
                     <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
                   </first_editor>
                   <second_editor />
@@ -197,16 +196,19 @@
         <option value="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Nurse Skeleton.py" />
         <option value="$PROJECT_DIR$/pykinect2/PyKinectV2.py" />
         <option value="$PROJECT_DIR$/HH/Main Codes/test_music.py" />
-        <option value="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient.py" />
+        <option value="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py" />
+        <option value="$PROJECT_DIR$/test_server.py" />
+        <option value="$PROJECT_DIR$/HH/Main Codes/test server.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1459" />
-    <option name="y" value="200" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1358" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -219,7 +221,7 @@
     <property name="SearchEverywhereHistoryKey" value="PyKinect&#9;null&#9;null&#10;PyKinectB&#9;null&#9;null" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/HH/Main Codes" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -251,25 +253,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Dr &amp; Patient">
-    <configuration name="Door Opens (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="computer-vision" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HH/Main Codes" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HH/Main Codes/Door Opens.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.test server">
     <configuration name="Door Opens" type="PythonConfigurationType" factoryName="Python">
       <module name="computer-vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -360,6 +344,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="test server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="computer-vision" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HH/Main Codes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HH/Main Codes/test server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="test_music" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="computer-vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -421,18 +423,18 @@
     <list>
       <item itemvalue="Python.Door Opens" />
       <item itemvalue="Python.Dr &amp; Nurse Skeleton" />
-      <item itemvalue="Python.Door Opens (1)" />
       <item itemvalue="Python.save video" />
       <item itemvalue="Python.Dr &amp; Patient" />
       <item itemvalue="Python.test_music" />
+      <item itemvalue="Python.test server" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test server" />
         <item itemvalue="Python.Dr &amp; Patient" />
         <item itemvalue="Python.test_music" />
         <item itemvalue="Python.Dr &amp; Nurse Skeleton" />
         <item itemvalue="Python.save video" />
-        <item itemvalue="Python.Door Opens (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -650,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524740790151</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="27 April">
+      <created>1524821681558</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1524821681558</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -659,14 +668,14 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.14714494" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5529762" side_tool="true" visible="true" weight="0.29198682" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5535714" side_tool="true" visible="true" weight="0.29198682" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.44642857" visible="true" weight="0.29198682" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32922733" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4470238" visible="true" weight="0.29198682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4904762" weight="0.30558598" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -679,9 +688,9 @@
       <window_info anchor="right" id="Data View" order="3" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14714494" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -689,16 +698,16 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48035714" weight="0.2902519" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="R Packages" order="3" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32922733" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30641592" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.51964283" side_tool="true" visible="true" weight="0.29001585" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Data View" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Data View" order="5" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32922733" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -718,7 +727,8 @@
     <MESSAGE value="23 April" />
     <MESSAGE value="25 April" />
     <MESSAGE value="26 April" />
-    <option name="LAST_COMMIT_MESSAGE" value="26 April" />
+    <MESSAGE value="27 April" />
+    <option name="LAST_COMMIT_MESSAGE" value="27 April" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -729,26 +739,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Hand Hygiene/test depth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Nurse Skeleton.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3298">
-          <caret line="194" lean-forward="true" selection-start-line="194" selection-end-line="194" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pykinect2/Depth Skeleton.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2128">
@@ -988,10 +978,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_server.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="318" column="54" selection-start-line="318" selection-start-column="54" selection-end-line="318" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="324">
+          <first_editor relative-caret-position="512">
             <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
           </first_editor>
           <second_editor />
@@ -1003,13 +1006,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient.py">
+    <entry file="file://$PROJECT_DIR$/HH/Main Codes/test server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3366">
-          <caret line="234" column="82" lean-forward="true" selection-start-line="234" selection-start-column="82" selection-end-line="234" selection-end-column="82" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
