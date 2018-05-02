@@ -90,7 +90,6 @@ IMPORTANT:
      use jointPoints[PyKinectV2.JointType_Head].x
      
      Similarly in function run(self), use joint_points[PyKinectV2.JointType_Head].x 
-     hma
      body = self._bodies reads from PyKinectRuntime.py. Mainly from KinectBodyFrameData 
      body = self._bodies.bodies[i] reads from class KinectBody, so should focus more on this specific class
      
@@ -107,3 +106,9 @@ IMPORTANT:
     5. Next step would be to link esp8266 to laptop/UP Board
     
     **Have to clean up the code for id, better just use one list to contain all detail, MUST DO LATER
+    
+2 May:
+
+    1. UP Board WiFi hotspot inconsistent, use a separate nodeMCU and serial link together might be better
+    2. For Python3, uninstall serial and pyserial, then install pyserial again. 
+    3. Arduino encoding format is ASCII, but utf-8 works anyways.
