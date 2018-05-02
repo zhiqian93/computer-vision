@@ -1,6 +1,6 @@
 import serial
 
-ser = serial.Serial('COM9')
+ser = serial.Serial('COM10')
 
 print(ser)
 
