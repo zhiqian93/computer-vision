@@ -8,10 +8,13 @@ import numpy as np
 import cv2
 import time
 import math
+import serial
 
 import importlib
 
 #importlib.import_module('Background Subtraction', package='HH')
+
+ser = serial.Serial('COM10', 9600)
 
 if sys.hexversion >= 0x03000000:
     import _thread as thread
@@ -30,6 +33,8 @@ SKELETON_COLORS = [pygame.color.THECOLORS["red"],
 # Capture bodies
 class BodyGameRuntime(object):
     def __init__(self):
+
+        self.nodemcu = ser.readline().decode('latin-1')
 
         pygame.init()
         myfont = pygame.font.SysFont("monospace", 15)
@@ -161,6 +166,10 @@ class BodyGameRuntime(object):
         position_dr_lefthand = None
         position_patient = None
 
+        if ser:
+            # Read from NodeMCU
+            self.nodemcu = ser.readline().decode('latin-1')
+
         while not self._done:
             # --- Main event loop
             key = cv2.waitKey(1) & 0xFF
@@ -287,7 +296,7 @@ class BodyGameRuntime(object):
                         distance = math.hypot((position_dr_lefthand[0] - position_dr_righthand[0]),
                                                 position_dr_lefthand[1] - position_dr_righthand[1])
 
-                        if distance < 30:
+                        if distance < 30 or "HH chair" in self.nodemcu:
                             case = "HH Performed"
                             label_hh = pygame.font.SysFont("bold", 40).render("HH Performed!", 1, (34, 139, 34))
                             self._frame_surface.blit(label_hh, (300, 10))
@@ -295,11 +304,6 @@ class BodyGameRuntime(object):
                                                                                     int(position_dr_lefthand[1])), 20)
                             pygame.draw.circle(self._frame_surface, (34, 193, 34), (int(position_dr_righthand[0]),
                                                                                     int(position_dr_righthand[1])), 20)
-
-                    if case == "touched patient":
-                        label_intersect = pygame.font.SysFont("bold", 40).render("Touching Patient!", 1,
-                                                                                 (100, 155, 255))
-
             pygame.draw.rect(self._frame_surface, (155, 155, 155), (350, 0, 200, 500), 4)
             pygame.draw.rect(self._frame_surface, (255, 155, 155), (0, 0, 150, 500), 4)
 
