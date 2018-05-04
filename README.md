@@ -111,7 +111,7 @@ IMPORTANT:
 
     1. UP Board WiFi hotspot inconsistent, use a separate nodeMCU and serial link together might be better
     2. For Python3, uninstall serial and pyserial, then install pyserial again. 
-    3. Arduino encoding format is ASCII, but utf-8 works anyways.
+    3. Arduino encoding format is ASCII, but utf-8 works anyways. (Use Latin-1 instead                                      )
     
 4 May:
     
