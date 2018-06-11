@@ -116,3 +116,8 @@ IMPORTANT:
 4 May:
     
     1. Unable to track patients if door opens suddenly within a short timing.
+
+11 June:
+    Used apscheduler to schedule program to start every weekday 9AM.
+    Store videos in 10 sequences [0-9] every day, which would be 10 hours in total:
+    9AM - 7PM
