@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="050b800a-a7ea-4a7e-a2d9-bdad5b9c0d74" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/HH/Main Codes/FINAL_loopvideos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py" beforeDir="false" afterPath="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HH/Main Codes/test serial.py" beforeDir="false" afterPath="$PROJECT_DIR$/HH/Main Codes/test serial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,6 +26,18 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="Dr &amp; Patient_DEMO.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="166" column="36" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
+                  <folding>
+                    <element signature="e#0#32#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="test server.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HH/Main Codes/test server.py">
               <provider selected="true" editor-type-id="text-editor">
@@ -39,8 +50,8 @@
           <file leaf-file-name="test serial.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HH/Main Codes/test serial.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="43" />
+                <state relative-caret-position="289">
+                  <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="43" />
                   <folding>
                     <element signature="e#0#13#0" expanded="true" />
                   </folding>
@@ -48,14 +59,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/README.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="FIRST">
-                  <first_editor relative-caret-position="478">
-                    <caret line="117" column="77" lean-forward="true" selection-start-line="117" selection-start-column="77" selection-end-line="117" selection-end-column="77" />
-                  </first_editor>
-                  <second_editor />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -67,20 +75,17 @@
           <file leaf-file-name="Main Logic.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HH/Main Codes/Main Logic.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" selection-start-line="7" selection-end-line="7" />
+                <state>
+                  <caret column="23" selection-start-column="23" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Dr &amp; Patient_DEMO.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py">
+          <file leaf-file-name="FINAL_loopvideos.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/HH/Main Codes/FINAL_loopvideos.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="580">
-                  <caret line="311" column="91" selection-start-line="311" selection-start-column="91" selection-end-line="311" selection-end-column="91" />
-                  <folding>
-                    <element signature="e#0#32#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="136">
+                  <caret line="28" column="52" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="52" />
                 </state>
               </provider>
             </entry>
@@ -99,9 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>body.joints</find>
-      <find>body</find>
-      <find>is_trac</find>
       <find>bodies.bod</find>
       <find>bodies</find>
       <find>get_last_bo</find>
@@ -129,6 +131,9 @@
       <find>pygame.init</find>
       <find>position_dr_left</find>
       <find>position_patient</find>
+      <find>ser</find>
+      <find>time</find>
+      <find>count</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,6 +183,7 @@
         <option value="$PROJECT_DIR$/HH/Main Codes/test serial.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py" />
+        <option value="$PROJECT_DIR$/HH/Main Codes/FINAL_loopvideos.py" />
       </list>
     </option>
   </component>
@@ -230,7 +236,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test serial">
+  <component name="RunManager" selected="Python.FINAL_loopvideos">
     <configuration name="Door Opens" type="PythonConfigurationType" factoryName="Python">
       <module name="computer-vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -249,24 +255,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Dr &amp; Nurse Skeleton" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="computer-vision" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HH/Main Codes" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Nurse Skeleton.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="Dr &amp; Patient" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="computer-vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -280,6 +268,42 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="C:\Users\Hen Zhi Qian\Documents\GitHub\computer-vision\HH\Main Codes\Dr &amp; Patient_DEMO.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Dr &amp; Patient_DEMO" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="computer-vision" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HH/Main Codes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="FINAL_loopvideos" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="computer-vision" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HH/Main Codes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HH/Main Codes/FINAL_loopvideos.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -339,24 +363,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test_music" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="computer-vision" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HH/Main Codes" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HH/Main Codes/test_music.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
       <module name="Spacer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -399,19 +405,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.Door Opens" />
-      <item itemvalue="Python.Dr &amp; Nurse Skeleton" />
       <item itemvalue="Python.Dr &amp; Patient" />
-      <item itemvalue="Python.test_music" />
       <item itemvalue="Python.test server" />
       <item itemvalue="Python.test serial" />
+      <item itemvalue="Python.Dr &amp; Patient_DEMO" />
+      <item itemvalue="Python.FINAL_loopvideos" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.FINAL_loopvideos" />
+        <item itemvalue="Python.Dr &amp; Patient_DEMO" />
         <item itemvalue="Python.test serial" />
         <item itemvalue="Python.test server" />
         <item itemvalue="Python.Dr &amp; Patient" />
-        <item itemvalue="Python.test_music" />
-        <item itemvalue="Python.Dr &amp; Nurse Skeleton" />
       </list>
     </recent_temporary>
   </component>
@@ -657,7 +663,21 @@
       <option name="project" value="LOCAL" />
       <updated>1525249550879</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="4 May">
+      <created>1525417940503</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1525417940504</updated>
+    </task>
+    <task id="LOCAL-00035" summary="4 May">
+      <created>1525428741727</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1525428741727</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -666,10 +686,10 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.14714494" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.55595237" side_tool="true" visible="true" weight="0.29198682" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.3922619" side_tool="true" visible="true" weight="0.29088914" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32922733" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.44404763" visible="true" weight="0.29198682" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6077381" visible="true" weight="0.29088914" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -686,9 +706,9 @@
       <window_info anchor="right" id="Data View" order="3" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14714494" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -696,17 +716,20 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48035714" weight="0.2902519" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="R Packages" order="3" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32922733" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30641592" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.51964283" side_tool="true" visible="true" weight="0.29001585" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Data View" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Data View" order="5" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32922733" />
     </layout-to-restore>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -728,7 +751,8 @@
     <MESSAGE value="27 April" />
     <MESSAGE value="30 April" />
     <MESSAGE value="2 May" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 May" />
+    <MESSAGE value="4 May" />
+    <option name="LAST_COMMIT_MESSAGE" value="4 May" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -739,13 +763,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pykinect2/PyKinectRuntime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7038">
-          <caret line="425" column="16" selection-start-line="425" selection-start-column="16" selection-end-line="425" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/pykinect2/Tracking Patient.py" />
     <entry file="file://$PROJECT_DIR$/pykinect2/Send HTTP request.py">
@@ -966,17 +983,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HH/Main Codes/Main Logic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HH/Main Codes/test serial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="43" />
+        <state relative-caret-position="289">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="43" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -984,24 +994,30 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="478">
-            <caret line="117" column="77" lean-forward="true" selection-start-line="117" selection-start-column="77" selection-end-line="117" selection-end-column="77" />
-          </first_editor>
-          <second_editor />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HH/Main Codes/Main Logic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HH/Main Codes/FINAL_loopvideos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="28" column="52" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="311" column="91" selection-start-line="311" selection-start-column="91" selection-end-line="311" selection-end-column="91" />
+        <state relative-caret-position="17">
+          <caret line="166" column="36" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

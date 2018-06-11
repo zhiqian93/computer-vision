@@ -14,8 +14,6 @@ import importlib
 
 #importlib.import_module('Background Subtraction', package='HH')
 
-ser = serial.Serial('COM10', 9600)
-
 if sys.hexversion >= 0x03000000:
     import _thread as thread
 else:
@@ -30,18 +28,18 @@ SKELETON_COLORS = [pygame.color.THECOLORS["red"],
                    pygame.color.THECOLORS["yellow"],
                    pygame.color.THECOLORS["violet"]]
 
+duration = 10
+
 # Capture bodies
 class BodyGameRuntime(object):
-    def __init__(self):
-
-        self.nodemcu = ser.readline().decode('latin-1')
+    def __init__(self, count):
 
         pygame.init()
         myfont = pygame.font.SysFont("monospace", 15)
 
         # Each Block: Video length in seconds
         self._captureTime = 3600
-        self._videosequence = 1
+        self._videosequence = count
         self.dr_id = 0
         self.patient_id = 0
         self.id = 0
@@ -169,10 +167,6 @@ class BodyGameRuntime(object):
         position_patient = None
         self._videosequence += 1
 
-        if ser:
-            # Read from NodeMCU
-            self.nodemcu = ser.readline().decode('latin-1')
-
         while not self._done:
             # --- Main event loop
             key = cv2.waitKey(1) & 0xFF
@@ -299,13 +293,13 @@ class BodyGameRuntime(object):
                         distance = math.hypot((position_dr_lefthand[0] - position_dr_righthand[0]),
                                                 position_dr_lefthand[1] - position_dr_righthand[1])
 
-                        if distance < 30 or "HH chair" in self.nodemcu:
-                            case = "HH Performed"
-                            label_hh = pygame.font.SysFont("bold", 40).render("HH Performed!", 1, (34, 139, 34))
-                            self._frame_surface.blit(label_hh, (300, 10))
-                            pygame.draw.circle(self._frame_surface, (34, 193, 34), (int(position_dr_lefthand[0]),
+
+                        case = "HH Performed"
+                        label_hh = pygame.font.SysFont("bold", 40).render("HH Performed!", 1, (34, 139, 34))
+                        self._frame_surface.blit(label_hh, (300, 10))
+                        pygame.draw.circle(self._frame_surface, (34, 193, 34), (int(position_dr_lefthand[0]),
                                                                                     int(position_dr_lefthand[1])), 20)
-                            pygame.draw.circle(self._frame_surface, (34, 193, 34), (int(position_dr_righthand[0]),
+                        pygame.draw.circle(self._frame_surface, (34, 193, 34), (int(position_dr_righthand[0]),
                                                                                     int(position_dr_righthand[1])), 20)
             pygame.draw.rect(self._frame_surface, (155, 155, 155), (350, 0, 200, 500), 4)
             pygame.draw.rect(self._frame_surface, (255, 155, 155), (0, 0, 150, 500), 4)
@@ -351,7 +345,9 @@ class BodyGameRuntime(object):
         self._kinect.close()
         pygame.quit()
 
-__main__ = "HH detection"
-game = BodyGameRuntime();
-game.run();
+# __main__ = "HH detection"
+for i in range (0, duration):
+    game = BodyGameRuntime(i)
+    game.run()
+    time.sleep(5)
 
