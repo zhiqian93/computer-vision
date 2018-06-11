@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="050b800a-a7ea-4a7e-a2d9-bdad5b9c0d74" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/HH/Main Codes/FINAL_loopvideos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HH/Main Codes/test schedule.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py" beforeDir="false" afterPath="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HH/Main Codes/FINAL_loopvideos.py" beforeDir="false" afterPath="$PROJECT_DIR$/HH/Main Codes/FINAL_loopvideos.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +26,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Dr &amp; Patient_DEMO.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Dr &amp; Patient_DEMO.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="17">
@@ -34,6 +34,15 @@
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test schedule.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/HH/Main Codes/test schedule.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -84,8 +93,11 @@
           <file leaf-file-name="FINAL_loopvideos.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HH/Main Codes/FINAL_loopvideos.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="28" column="52" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="52" />
+                <state relative-caret-position="765">
+                  <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+                  <folding>
+                    <element signature="e#0#32#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -183,6 +195,7 @@
         <option value="$PROJECT_DIR$/HH/Main Codes/test serial.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py" />
+        <option value="$PROJECT_DIR$/HH/Main Codes/test schedule.py" />
         <option value="$PROJECT_DIR$/HH/Main Codes/FINAL_loopvideos.py" />
       </list>
     </option>
@@ -255,24 +268,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Dr &amp; Patient" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="computer-vision" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HH/Main Codes" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Hen Zhi Qian\Documents\GitHub\computer-vision\HH\Main Codes\Dr &amp; Patient_DEMO.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="Dr &amp; Patient_DEMO" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="computer-vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -322,6 +317,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test schedule" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="computer-vision" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HH/Main Codes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HH/Main Codes/test schedule.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -405,19 +418,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.Door Opens" />
-      <item itemvalue="Python.Dr &amp; Patient" />
       <item itemvalue="Python.test server" />
       <item itemvalue="Python.test serial" />
       <item itemvalue="Python.Dr &amp; Patient_DEMO" />
       <item itemvalue="Python.FINAL_loopvideos" />
+      <item itemvalue="Python.test schedule" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.FINAL_loopvideos" />
+        <item itemvalue="Python.test schedule" />
         <item itemvalue="Python.Dr &amp; Patient_DEMO" />
         <item itemvalue="Python.test serial" />
         <item itemvalue="Python.test server" />
-        <item itemvalue="Python.Dr &amp; Patient" />
       </list>
     </recent_temporary>
   </component>
@@ -677,7 +690,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525428741727</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="11 June">
+      <created>1528703439832</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1528703439833</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -752,7 +772,8 @@
     <MESSAGE value="30 April" />
     <MESSAGE value="2 May" />
     <MESSAGE value="4 May" />
-    <option name="LAST_COMMIT_MESSAGE" value="4 May" />
+    <MESSAGE value="11 June" />
+    <option name="LAST_COMMIT_MESSAGE" value="11 June" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -763,7 +784,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/pykinect2/Tracking Patient.py" />
     <entry file="file://$PROJECT_DIR$/pykinect2/Send HTTP request.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1000,6 +1020,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="166" column="36" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HH/Main Codes/Main Logic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1007,17 +1037,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HH/Main Codes/FINAL_loopvideos.py">
+    <entry file="file://$PROJECT_DIR$/HH/Main Codes/test schedule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="28" column="52" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="52" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HH/Main Codes/Dr &amp; Patient_DEMO.py">
+    <entry file="file://$PROJECT_DIR$/HH/Main Codes/FINAL_loopvideos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="166" column="36" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
+        <state relative-caret-position="765">
+          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
