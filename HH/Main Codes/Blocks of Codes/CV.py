@@ -1,9 +1,7 @@
 from pykinect2 import PyKinectV2
-from pykinect2.PyKinectV2 import *
 from pykinect2 import PyKinectRuntime
 import ctypes
 import pygame
-import sys
 import numpy as np
 import cv2
 import time
@@ -19,6 +17,7 @@ SKELETON_COLORS = [pygame.color.THECOLORS["red"],
                    pygame.color.THECOLORS["violet"]]
 
 videoseq = 10
+
 
 # Capture bodies
 class BodyGameRuntime(object):
@@ -348,6 +347,7 @@ class BodyGameRuntime(object):
         # Close our Kinect sensor, close the window and quit.
         self._kinect.close()
         pygame.quit()
+
 
 def job():
     for i in range(0, videoseq):
