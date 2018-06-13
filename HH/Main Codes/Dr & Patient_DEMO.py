@@ -10,11 +10,8 @@ import time
 import math
 import serial
 
-import importlib
-
-#importlib.import_module('Background Subtraction', package='HH')
-
-ser = serial.Serial('COM10', 9600)
+# we attach the board to an external wifi module which links to the version 1 sensors, which communicates through serial
+# ser = serial.Serial('COM10', 9600)
 
 if sys.hexversion >= 0x03000000:
     import _thread as thread
@@ -34,7 +31,7 @@ SKELETON_COLORS = [pygame.color.THECOLORS["red"],
 class BodyGameRuntime(object):
     def __init__(self):
 
-        self.nodemcu = ser.readline().decode('latin-1')
+        # self.nodemcu = ser.readline().decode('latin-1')
 
         pygame.init()
         myfont = pygame.font.SysFont("monospace", 15)
@@ -169,9 +166,9 @@ class BodyGameRuntime(object):
         position_patient = None
         self._videosequence += 1
 
-        if ser:
-            # Read from NodeMCU
-            self.nodemcu = ser.readline().decode('latin-1')
+        # if ser:
+        #     # Read from NodeMCU
+        #     self.nodemcu = ser.readline().decode('latin-1')
 
         while not self._done:
             # --- Main event loop
@@ -299,7 +296,7 @@ class BodyGameRuntime(object):
                         distance = math.hypot((position_dr_lefthand[0] - position_dr_righthand[0]),
                                                 position_dr_lefthand[1] - position_dr_righthand[1])
 
-                        if distance < 30 or "HH chair" in self.nodemcu:
+                        if distance < 30: # or "HH chair" in self.nodemcu:
                             case = "HH Performed"
                             label_hh = pygame.font.SysFont("bold", 40).render("HH Performed!", 1, (34, 139, 34))
                             self._frame_surface.blit(label_hh, (300, 10))

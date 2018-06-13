@@ -1,6 +1,6 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
 import CV
-
+import Serial
 
 sched = BlockingScheduler()
 
